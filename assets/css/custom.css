@@ -1,0 +1,452 @@
+/* ----------------------------------
+
+Name: custom.css
+Version: 1.0
+
+------------------------------------- 
+
+Table of contents Home page
+    
+   	   1.1  General css
+       1.2  Header_section css 
+       1.3  Main_Menu_sectio
+       
+
+
+Table of contents  Our-Team
+    2.1 Team-Banner-Section 
+    2.2 Team-Section
+
+Table of contents  Error-Team
+    3.1 Error-page-section
+    3.2 Error-page-content
+
+
+
+/*--------------------------------------------------------------------
+				1.1General css
+----------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700|Lobster&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+font-family: 'Cabin', sans-serif;
+}
+
+a:focus,
+a:hover,
+a:active,
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    text-transform: capitalize;
+    font-family: 'Lobster', cursive;
+   
+}
+
+p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.3s 0.3s ease;
+    -moz-transition: opacity 0.3s 0.3s ease;
+    -ms-transition: opacity 0.3s 0.3s ease;
+    -o-transition: opacity 0.3s 0.3s ease;
+    transition: opacity 0.3s 0.3s ease;
+    opacity: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.section-ptb {
+    padding: 100px 0px 100px;
+}
+
+.v-center{
+    width:100%;
+    height: 100vh;
+/*    background:#ddd;*/
+}
+
+/*--------------------------------------------------------------------
+				1.1 Header-Menu css
+----------------------------------------------------------------------*/
+.navbar-logo img{
+    max-height: 50px;
+}
+.mainmenu ul li a {
+    font-size: 18px;
+    color: #fff;
+    padding: 13px 20px;
+    display: block;
+}
+.mainmenu ul li:hover a{
+    color: #ffcf3b !important;
+}
+.mainmenu ul li.dropdown{
+    position: relative;
+}
+.d-down-menu{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    min-width: 170px;
+    display: none;
+    padding-top: 11px;
+ 
+}
+.d-down-menu-inner{
+    background: #fff;
+     -webkit-box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.11);
+}
+.d-down-menu li {
+     -webkit-transition:all .3s ease;
+    transition:all .3s ease;
+}
+.mainmenu ul li .d-down-menu li a{
+    color: #000 !important;
+    padding: 12px 10px!important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    -webkit-transition:all .3s ease;
+    transition:all .3s ease;
+}
+
+.mainmenu ul li .d-down-menu li a:hover {
+    background: #ffcf3b;
+    color: #fff !important;
+}
+
+.fixed .mainmenu ul li a:hover {
+    color: #ffcf3b;
+}
+.fixed .logo_white{
+    display: none;
+}
+.fixed .logo_black{
+    display: block;
+}
+.fixed .d-down-menu{
+    padding-top: 15px;
+}
+
+.header-menu {
+    background: transparent;
+}
+.header-navbar{
+     -webkit-transition: all .5s;
+    transition: all .5s;
+}
+.header-navbar:hover{
+    background: #fff; 
+}
+.header-navbar:hover .mainmenu ul li a{
+    color:#000;
+} 
+.header-navbar:hover .logo_black{
+    display: block;
+}
+.header-navbar:hover .logo_white{
+    display: none;
+}
+.logo_black{
+    display: none;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 9999;
+    -webkit-animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
+     background: rgba(255, 255, 255, 1) none repeat scroll 0 0; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+.fixed .mainmenu ul li a {
+    color: #000;
+}
+
+
+
+/*--------------------------------------------------------------------
+				1.2 banner-section css
+----------------------------------------------------------------------*/
+
+.banner-section{
+    background:linear-gradient(to top , rgba(0,0,0, 0.5) 0%, rgba(0,0,0,0.5) 100%),  url('../../assets/images/bg-welcome.png') fixed  no-repeat center center / cover;
+    min-height: 450px;
+    position: relative;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.banner-con-title{
+    color: #fff;
+    font-size: 85px;
+    margin-bottom: 5px;
+      font-family: 'Lobster', cursive;
+    font-weight: 400;
+    line-height: 1.1;
+}
+.banner-con-subtitle{
+    color: #fff;
+    font-family: 'Cabin';
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+.primary-btn{
+       max-width: 200px;
+    width: 100%;
+    font-size: 18px;
+    margin: 5px;
+    background-color: #ffcf3b;
+    border-color: #ffc922;
+    display: inline-block;
+    padding: 7px 20px;
+    color: #000;
+    font-weight: 700;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+
+}
+.primary-btn:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scale3d(1, 0, 1);
+    transform-origin: 50% 100%;
+    transition: transform 0.3s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+.primary-btn:hover{
+    color: #ffcf3b;
+}
+.primary-btn:hover.primary-btn:before {
+    transform: scale3d(1, 1, 1);
+    transform-origin: 50% 0%;
+}
+
+
+
+
+
+
+
+
+.grid-item-content {
+  height: 100px;
+  background: gray;
+  border: 2px solid hsla(0, 0%, 0%, 0.7);
+}
+.grid-item{
+    margin-bottom: 20px;
+}
+.demo-img{
+    
+    position: relative;
+
+}
+.background-pic{
+    position: relative;
+    
+    padding-bottom: 70%;
+    position: relative;
+}
+.resp_img{
+   background: url('../../assets/images/preview/home_01.png');
+    background-position: top center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+/*    background-position: center center;*/
+}
+.ddd {
+    background: #fff;
+    text-align: center;
+    padding: 12px;
+}
+}
+/*
+.div-img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+   background: url('../../assets/images/preview/home_01.png');
+    background-position: top center;
+}
+*/
+
+/*
+.grid {
+    background: #fff;
+    max-width: 1200px;
+    width: 100%;
+}
+*/
+
+/* clear fix */
+/*
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+*/
+
+
+/* ---- .grid-item ---- */
+
+
+/*
+.grid-item {
+    float: left;
+    width: 33.3333%;
+    height: auto;
+    background: gray;
+    position: relative;
+}
+*/
+/*
+.grid-item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #40AFCCB3;
+    transform: scaleX(0);
+    transition: all .3s ease;
+}
+
+.grid-item:hover::after {
+    transform: scaleX(1);
+}
+
+.grid-item i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform: ;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    font-size: 30px;
+    transition: all .3s ease;
+}
+
+.grid-item:hover.grid-item i {
+    transform: translate(-50%, -50%) scale(1);
+
+}*/
+
+
+
+/*
+.img-box{
+    position: relative;
+}
+*/
+.box{
+    position: relative;
+  width: 100%;
+    
+    
+}
+.box-content{
+    position: relative;
+    overflow: hidden;
+}
+.box-hover{
+   position: absolute;
+    background: rgba(255, 90, 60, 0.8);
+    width: 90%;
+    height: 90%;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+    opacity: 1;
+
+}
+
+.box-content:hover .box-hover{
+    top:50%;
+}
